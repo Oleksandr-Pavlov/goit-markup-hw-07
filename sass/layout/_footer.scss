@@ -28,15 +28,9 @@
 
 .address__item {
   margin-bottom: 9px;
-}
-.address__item:last-child {
-  margin-bottom: 0;
-}
-
-.address__link[target] {
-  color: var(--text-color-secondary);
-
-  transition: color var(--transition);
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .address__link {
@@ -44,45 +38,18 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  &[target] {
+    color: var(--text-color-secondary);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 
   transition: color var(--transition);
 }
 
-.address__link:hover,
-.address__link:focus {
-  color: var(--accent-color);
-}
-
-.footer-soc {
+.footer__join-us {
   margin-left: 70px;
-}
-
-.footer-soc__item {
-  margin-right: 10px;
-}
-.footer-soc__item:last-child {
-  margin-right: 0;
-}
-
-.footer-soc__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  color: #fff;
-
-  transition: background-color var(--transition);
-}
-
-.footer-soc__icon {
-  fill: currentColor;
-}
-
-.footer-soc__link:hover,
-.footer-soc__link:focus {
-  background-color: var(--accent-color);
 }

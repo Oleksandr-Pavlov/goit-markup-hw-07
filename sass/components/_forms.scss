@@ -1,13 +1,13 @@
-.footer__form-wrap {
+.subscribe {
   margin-left: 93px;
   width: 570px;
 }
 
-.footer__form {
+.subscribe__form {
   display: flex;
 }
 
-.footer__input {
+.subscribe__input {
   width: 358px;
   height: 50px;
   padding: 15px;
@@ -18,13 +18,14 @@
   border-radius: 4px;
 
   transition: border var(--transition);
-}
-.footer__input:focus {
-  border: 1px solid #2196f3;
-  outline: none;
+
+  &:focus {
+    border: 1px solid #2196f3;
+    outline: none;
+  }
 }
 
-.footer__button {
+.subscribe__button {
   position: relative;
 
   width: 200px;
@@ -32,7 +33,7 @@
   margin-left: 12px;
 }
 
-.footer__icon {
+.subscribe__icon {
   position: absolute;
   top: 13px;
   right: 28px;
@@ -40,33 +41,37 @@
 
 // MODAL FORM
 
-.form__label {
+.lead__label {
   display: block;
 
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #757575;
+
+  & + & {
+    margin-top: 10px;
+  }
 }
 
-.form__label span {
+.lead__input {
   position: relative;
   display: block;
 }
 
-.form__icon {
+.lead__icon {
   position: absolute;
   top: 11px;
   left: 12px;
 
   transition: fill var(--transition);
+
+  .lead__text:focus + & {
+    fill: var(--accent-color);
+  }
 }
 
-.form__label + .form__label {
-  margin-top: 10px;
-}
-
-.form__text {
+.lead__text {
   display: block;
 
   margin-top: 4px;
@@ -80,32 +85,28 @@
   border-radius: 4px;
 
   transition: border var(--transition);
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:focus {
+    border: 1px solid #2196f3;
+    outline: none;
+  }
 }
 
-.form__text:focus {
-  border: 1px solid #2196f3;
-  outline: none;
-}
-
-.form__text:focus + .form__icon {
-  fill: var(--accent-color);
-}
-
-.form__text::placeholder {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.form__text--textarea {
+.lead__text--textarea {
   resize: none;
   min-height: 120px;
   overflow: auto;
   padding: 12px 16px;
 }
 
-.form__policy {
+.lead__policy {
   position: relative;
 
   display: block;
@@ -120,11 +121,11 @@
   color: #757575;
 }
 
-.form__policy a {
+.lead__agreement {
   color: var(--accent-color);
 }
 
-.form__checkbox {
+.lead__checkbox {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -137,7 +138,7 @@
   margin: -1px;
 }
 
-.form__icon-check {
+.lead__icon-check {
   position: absolute;
   top: 50%;
   left: 0px;
@@ -148,10 +149,10 @@
 
   transition: background-color var(--transition), border var(--transition);
   cursor: pointer;
-}
 
-.form__checkbox:checked + .form__icon-check {
-  background-color: var(--accent-color);
-  border: 2px solid var(--accent-color);
-  outline: none;
+  .lead__checkbox:checked + & {
+    background-color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    outline: none;
+  }
 }

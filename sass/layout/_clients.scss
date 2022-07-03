@@ -1,9 +1,9 @@
 .clients__item {
   max-width: 170px;
   margin-right: var(--element-gap);
-}
-.clients__item:last-child {
-  margin-right: 0;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .clients__link {
@@ -19,15 +19,15 @@
   transform: scale(1);
 
   transition: border var(--transition), color var(--transition), transform var(--transition);
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    transform: scale(1.1);
+  }
 }
 
 .clients__icon {
   fill: currentColor;
-}
-
-.clients__link:hover,
-.clients__link:focus {
-  border: 1px solid var(--accent-color);
-  color: var(--accent-color);
-  transform: scale(1.1);
 }

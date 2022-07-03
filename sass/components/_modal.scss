@@ -14,10 +14,10 @@
   border-radius: 4px;
 
   transition: transform 300ms linear;
-}
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
 }
 
 .modal__close-btn {
@@ -36,15 +36,15 @@
 
   transition: color var(--transition);
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
-.modal__close-btn > svg {
+.modal__close-icon {
   fill: currentColor;
-}
-
-.modal__close-btn:hover,
-.modal__close-btn:focus {
-  color: var(--accent-color);
 }
 
 .modal__title {

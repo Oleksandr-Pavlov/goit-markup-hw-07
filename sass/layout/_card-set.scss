@@ -1,35 +1,36 @@
-.card-list {
+.cards {
   flex-wrap: wrap;
   margin-right: calc(-1 * var(--element-gap));
   margin-bottom: calc(-1 * var(--element-gap));
 }
 
-.card-item {
+.cards__item {
   flex-basis: calc((100% / 3) - var(--element-gap));
   margin-right: var(--element-gap);
   margin-bottom: var(--element-gap);
 }
 
-.card-item-link {
+.cards__link {
   display: block;
   width: 100%;
 
   box-shadow: none;
 
   transition: box-shadow var(--transition);
-}
-.card-item-link:hover,
-.card-item-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
-.card-overlay {
+.cards__overlay {
   position: relative;
   overflow: hidden;
 }
 
-.card-overlay-text {
+.cards__text {
   position: absolute;
   top: 0;
   left: 0;
@@ -45,19 +46,20 @@
 
   background-color: rgba(33, 150, 243, 0.9);
   color: var(--text-color-secondary);
-}
-.card-item-link:hover .card-overlay-text,
-.card-item-link:focus .card-overlay-text {
-  transform: translate(0);
+
+  .cards__link:hover &,
+  .cards__link:focus & {
+    transform: translate(0);
+  }
 }
 
-.card-item-bottom {
+.cards__bottom {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
 }
 
-.card-item-title {
+.cards__title {
   margin-bottom: 4px;
 
   font-size: 18px;
@@ -66,7 +68,7 @@
   color: var(--title-color);
 }
 
-.card-item-text {
+.cards__descr {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;

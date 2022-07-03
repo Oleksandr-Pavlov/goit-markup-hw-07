@@ -1,9 +1,9 @@
 .services__item {
   margin-right: var(--element-gap);
   max-width: 100%;
-}
-.services__item:last-child {
-  margin-right: 0;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .services__wrap {

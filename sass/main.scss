@@ -1,26 +1,11 @@
 // Utils
-@import './utils/vars';
-@import './utils/vs';
+@import './utils/module';
 
 // Base
-@import './base/reset';
-@import './base/common';
-@import './base/container';
+@import './base/module';
 
 // Components
-@import './components/button';
-@import './components/logo';
-@import './components/forms';
-@import './components/backdrop';
-@import './components/modal';
+@import './components/module';
 
 // Layout
-@import './layout/header';
-@import './layout/hero';
-@import './layout/features';
-@import './layout/services';
-@import './layout/team';
-@import './layout/clients';
-@import './layout/portfolio';
-@import './layout/card-set';
-@import './layout/footer';
+@import './layout/module';
